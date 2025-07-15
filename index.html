@@ -1,0 +1,2625 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jérémy - Support de Présentation</title>
+    <link rel="stylesheet" href="https://use.typekit.net/xud8xsa.css" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navigation">
+      <button
+        class="nav-btn nav-prev"
+        id="navPrev"
+        aria-label="Section précédente"
+      >
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button
+        class="nav-btn nav-next"
+        id="navNext"
+        aria-label="Section suivante"
+      >
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </nav>
+
+    <!-- Bouton Sommaire et Menu -->
+    <div class="summary-menu-container">
+      <button
+        class="summary-toggle"
+        id="summaryToggle"
+        aria-label="Ouvrir le sommaire"
+      >
+        <i class="fas fa-list"></i>
+        <span class="summary-text">Sommaire</span>
+      </button>
+      <div
+        class="summary-menu"
+        id="summaryMenu"
+        aria-label="Sommaire de la présentation"
+      >
+        <ul>
+          <li class="summary-item-with-submenu">
+            <a href="#slide-0" class="summary-link summary-main-link"
+              ><i class="fas fa-user"></i> Présentation</a
+            >
+            <ul class="summary-submenu">
+              <li>
+                <a href="#slide-0" class="summary-link"
+                  ><i class="fas fa-user"></i> Présentation personnelle</a
+                >
+              </li>
+              <li>
+                <a href="#slide-1" class="summary-link"
+                  ><i class="fas fa-briefcase"></i> Demande du client</a
+                >
+              </li>
+              <li>
+                <a href="#slide-2" class="summary-link"
+                  ><i class="fas fa-question-circle"></i> QQOQCP</a
+                >
+              </li>
+              <li>
+                <a href="#slide-3" class="summary-link"
+                  ><i class="fas fa-flag"></i> Objectifs de la marque</a
+                >
+              </li>
+              <li>
+                <a href="#slide-4" class="summary-link"
+                  ><i class="fas fa-users"></i> Analyse du cœur de cible</a
+                >
+              </li>
+              <li>
+                <a href="#slide-5" class="summary-link"
+                  ><i class="fas fa-chart-bar"></i> Analyse de la concurrence</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="summary-item-with-submenu">
+            <a href="#slide-6-2" class="summary-link summary-main-link"
+              ><i class="fas fa-palette"></i> Identité visuelle</a
+            >
+            <ul class="summary-submenu">
+              <li>
+                <a href="#slide-6-2" class="summary-link"
+                  ><i class="fas fa-images"></i> Moodboards
+                </a>
+              </li>
+              <li>
+                <a href="#slide-6-3" class="summary-link"
+                  ><i class="fas fa-signature"></i> Logotype</a
+                >
+              </li>
+              <li>
+                <a href="#slide-6-3-final" class="summary-link"
+                  ><i class="fas fa-check-circle"></i> Choix final</a
+                >
+              </li>
+              <li>
+                <a href="#slide-6-4" class="summary-link"
+                  ><i class="fas fa-palette"></i> Couleurs</a
+                >
+              </li>
+              <li>
+                <a href="#slide-6-5" class="summary-link"
+                  ><i class="fas fa-font"></i> Typographies</a
+                >
+              </li>
+              <li>
+                <a href="#slide-6-6" class="summary-link"
+                  ><img
+                    src="assets/decli.svg"
+                    class="summary-link-icon"
+                    alt="Logo icon"
+                  />
+                  Logo</a
+                >
+              </li>
+              <li>
+                <a href="#slide-6-7" class="summary-link"
+                  ><i class="fas fa-eye"></i> Résumé de la DA</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="summary-item-with-submenu">
+            <a href="#slide-7-1" class="summary-link summary-main-link"
+              ><i class="fab fa-wordpress"></i> Intégration WordPress</a
+            >
+            <ul class="summary-submenu">
+              <li>
+                <a href="#slide-7-1" class="summary-link"
+                  ><i class="fas fa-sitemap"></i> Arborescence</a
+                >
+              </li>
+              <li>
+                <a href="#slide-7-2" class="summary-link"
+                  ><i class="fas fa-pencil-ruler"></i> Wireframes</a
+                >
+              </li>
+              <li>
+                <a href="#slide-7-2-maquettes" class="summary-link"
+                  ><i class="fas fa-desktop"></i> Maquettes</a
+                >
+              </li>
+              <li>
+                <a href="#slide-7-3" class="summary-link"
+                  ><i class="fas fa-qrcode"></i> Site Internet</a
+                >
+              </li>
+              <li>
+                <a href="#slide-7-4" class="summary-link"
+                  ><i class="fas fa-plug"></i> Plugins majeurs</a
+                >
+              </li>
+              <li>
+                <a href="#slide-7-5" class="summary-link"
+                  ><i class="fas fa-shield-alt"></i> Optimisation Sécurité</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="summary-item-with-submenu">
+            <a href="#slide-8" class="summary-link summary-main-link"
+              ><i class="fas fa-bullhorn"></i> Marketing</a
+            >
+            <ul class="summary-submenu">
+              <li>
+                <a href="#slide-8-1" class="summary-link"
+                  ><i class="fas fa-user-friends"></i> Personas</a
+                >
+              </li>
+              <li>
+                <a href="#slide-8-2" class="summary-link"
+                  ><i class="fas fa-chart-line"></i> Objectifs stratégiques</a
+                >
+              </li>
+              <li>
+                <a href="#slide-8-3" class="summary-link"
+                  ><i class="fas fa-envelope"></i> Emailing</a
+                >
+              </li>
+              <li>
+                <a href="#slide-8-4" class="summary-link"
+                  ><i class="fas fa-share-alt"></i> Exemples de publications</a
+                >
+              </li>
+              <li>
+                <a href="#slide-8-5" class="summary-link"
+                  ><i class="fas fa-calendar-check"></i> Calendrier éditorial</a
+                >
+              </li>
+              <li>
+                <a href="#slide-8-6" class="summary-link"
+                  ><i class="fas fa-images"></i> Mockups</a
+                >
+              </li>
+              <li>
+                <a href="#slide-8-7" class="summary-link"
+                  ><i class="fas fa-images"></i> Storyboard</a
+                >
+              </li>
+              <li>
+                <a href="#slide-8-8" class="summary-link"
+                  ><i class="fas fa-play-circle"></i> Vidéo</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#slide-9" class="summary-link"
+              ><i class="fas fa-graduation-cap"></i> Conclusion TREKKS</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Fin bouton Sommaire et Menu -->
+
+    <!-- Contenu principal -->
+    <main class="presentation-container">
+      <!-- Section -1: Section vide -->
+      <section class="slide slide-empty" id="slide--1">
+        <div class="slide-content">
+          <!-- Section vide -->
+        </div>
+      </section>
+
+      <!-- Section 0: Transition Présentation -->
+      <section class="slide slide-transition" id="slide-0-transition">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title">PRÉSENTATION</h1>
+            <div class="title-line"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 0: Présentation personnelle -->
+      <section class="slide slide-personal" id="slide-0">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title">
+              <i class="fas fa-user"></i> PRÉSENTATION PERSONNELLE
+            </h1>
+            <div class="title-line"></div>
+          </div>
+          <div class="content-card">
+            <h4><i class="fas fa-user"></i> Jérémy Naphay</h4>
+            <p><strong>Concepteur Designer UI</strong></p>
+            <p>
+              Spécialisé dans la création d'expériences digitales immersives et
+              la conception d'interfaces modernes.
+            </p>
+            <p>
+              Passionné par l'intersection entre design, technologie et
+              storytelling.
+            </p>
+            <p>
+              <strong>Recherche :</strong> Développer mes compétences en
+              Creative Development et consolider ma posture de
+              designer-développeur capable de créer des expériences digitales
+              complètes.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 1: Demande du client -->
+      <section class="slide slide-brief" id="slide-1">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title">
+              <i class="fas fa-briefcase"></i> DEMANDE DU CLIENT
+            </h1>
+            <div class="title-line"></div>
+          </div>
+          <div class="brief-grid" style="font-size: 1.2rem">
+            <div class="brief-section">
+              <h4>
+                <i class="fas fa-building"></i> Présentation de la société
+              </h4>
+              <p>
+                <strong>Aventura Trek</strong> agence de trekking et aventure
+                immersive, en lien avec la nature et les cultures locales.
+              </p>
+            </div>
+
+            <div class="brief-section">
+              <h4><i class="fas fa-bullseye"></i> Mission de la refonte</h4>
+              <ul>
+                <li>Nouveau nom de marque</li>
+                <li>Refonte complète du site web</li>
+                <li>Supports print & digitaux alignés</li>
+              </ul>
+            </div>
+
+            <div class="brief-section">
+              <h4><i class="fas fa-bullseye"></i> Enjeux et objectifs</h4>
+              <ul>
+                <li>Identité visuelle <strong>forte et originale</strong></li>
+                <li>Communication <strong>360°</strong></li>
+                <li>Site <strong>immersif et intuitif</strong></li>
+              </ul>
+            </div>
+
+            <div class="brief-section">
+              <h4><i class="fas fa-users"></i> Cible</h4>
+              <p>
+                Voyageurs en quête de sens, d'authenticité et de dépaysement
+                engagé.
+              </p>
+            </div>
+
+            <div class="brief-section">
+              <h4><i class="fas fa-lightbulb"></i> Pourquoi cette refonte ?</h4>
+              <ul>
+                <li>Séduire une nouvelle audience</li>
+                <li>Se différencier dans un marché saturé</li>
+                <li>Valoriser les partenaires locaux</li>
+                <li>Renforcer l'image de marque</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: QQOQCP -->
+      <section class="slide slide-qqoqcp" id="slide-2">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title">
+              <i class="fas fa-question-circle"></i> QQOQCP - POINTS FORTS
+            </h1>
+            <div class="title-line"></div>
+          </div>
+          <div class="brief-grid">
+            <div class="brief-section">
+              <h4><i class="fas fa-question"></i> Quoi</h4>
+              <ul>
+                <li>Refonte identité visuelle</li>
+                <li>Plan de com' 360°</li>
+                <li>Nouveau site web</li>
+              </ul>
+            </div>
+            <div class="brief-section">
+              <h4><i class="fas fa-user"></i> Qui</h4>
+              <ul>
+                <li>Aventura Trek</li>
+                <li>Spécialiste aventure & trekking</li>
+                <li>Ancrée dans le local & le culturel</li>
+              </ul>
+            </div>
+            <div class="brief-section">
+              <h4><i class="fas fa-lightbulb"></i> Pourquoi</h4>
+              <ul>
+                <li>Se démarquer</li>
+                <li>Attirer une nouvelle audience</li>
+                <li>Offrir une expérience unique</li>
+              </ul>
+            </div>
+            <div class="brief-section">
+              <h4><i class="fas fa-cogs"></i> Comment</h4>
+              <ul>
+                <li>Visuels forts, UX soignée</li>
+                <li>Supports print & digitaux alignés</li>
+                <li>Ciblage des voyageurs engagés</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Objectifs de la marque -->
+      <section class="slide slide-objectives" id="slide-3">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title">
+              <i class="fas fa-flag"></i> OBJECTIFS DE LA MARQUE
+            </h1>
+            <div class="title-line"></div>
+          </div>
+          <div class="objectives-bento-grid">
+            <div class="bento-item">
+              <h4>
+                <i class="fas fa-palette"></i> Identité visuelle originale
+              </h4>
+              <p>Nouvelle identité graphique + nom de marque</p>
+              <ul>
+                <li>Aventure, respect, écologie</li>
+                <li>Cohérence print & digital</li>
+              </ul>
+            </div>
+            <div class="bento-item">
+              <h4><i class="fas fa-bullhorn"></i> Communication 360°</h4>
+              <p>Stratégie multicanale</p>
+              <ul>
+                <li>Digital : site, réseaux, newsletters</li>
+                <li>Print : brochures, affiches, goodies</li>
+              </ul>
+            </div>
+            <div class="bento-item">
+              <h4><i class="fas fa-mobile-alt"></i> UX/UI</h4>
+              <p>Expérience utilisateur optimisée</p>
+              <ul>
+                <li>Navigation simplifiée</li>
+                <li>Réservation intuitive</li>
+                <li>Responsive et orienté voyageur moderne</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Analyse du cœur de cible -->
+      <section class="slide slide-target" id="slide-4">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title">
+              <i class="fas fa-users"></i> ANALYSE DU CŒUR DE CIBLE
+            </h1>
+            <div class="title-line"></div>
+          </div>
+          <div class="target-bento-grid">
+            <div class="bento-item">
+              <h4><i class="fas fa-chart-pie"></i> Profil démographique</h4>
+              <ul>
+                <li><strong>Âge :</strong> 25-45 ans</li>
+                <li><strong>CSP+</strong> : cadres & libéraux</li>
+                <li><strong>Revenus :</strong> 3 000-8 000 € / mois</li>
+                <li>
+                  <strong>Localisation :</strong> France, Suisse, Belgique
+                </li>
+              </ul>
+            </div>
+            <div class="bento-item">
+              <h4><i class="fas fa-heart"></i> Profil psychographique</h4>
+              <ul>
+                <li>
+                  <strong>Valeurs :</strong> authenticité, écologie, culture
+                </li>
+                <li>
+                  <strong>Lifestyle :</strong> Actif, connecté, en quête de sens
+                </li>
+                <li>
+                  <strong>Motivations :</strong> Évasion, challenge, rencontres
+                </li>
+                <li>
+                  <strong>Aspirations :</strong> Expériences uniques,
+                  développement personnel
+                </li>
+              </ul>
+            </div>
+            <div class="bento-item">
+              <h4><i class="fas fa-mobile-alt"></i> Comportements digitaux</h4>
+              <ul>
+                <li>
+                  <strong>Usage :</strong> Forte présence sur réseaux sociaux
+                </li>
+                <li>
+                  <strong>Recherche :</strong> Inspiration via Instagram, blogs
+                  voyage
+                </li>
+                <li>
+                  <strong>Réservation :</strong> Privilégie les plateformes
+                  spécialisées
+                </li>
+                <li>
+                  <strong>Partage :</strong> Partage activement ses expériences
+                </li>
+              </ul>
+            </div>
+            <div class="bento-item">
+              <h4>
+                <i class="fas fa-exclamation-triangle"></i> Freins & obstacles
+              </h4>
+              <ul>
+                <li><strong>Temps</strong></li>
+                <li><strong>Budget</strong></li>
+                <li><strong>Sécurité</strong></li>
+                <li><strong>Inconnu</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Analyse de la concurrence -->
+      <section class="slide slide-competition" id="slide-5">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title">
+              <i class="fas fa-chart-bar"></i> ANALYSE DE LA CONCURRENCE
+            </h1>
+            <div class="title-line"></div>
+          </div>
+
+          <div class="competition-tabs">
+            <button class="competition-tab" data-target="direct-competitors">
+              <i class="fas fa-building"></i> Concurrents Directs
+            </button>
+            <button class="competition-tab" data-target="indirect-agencies">
+              <i class="fas fa-plane"></i> Agences de Voyage
+            </button>
+            <button class="competition-tab" data-target="indirect-clubs">
+              <i class="fas fa-users"></i> Associations et Clubs
+            </button>
+          </div>
+
+          <div class="content-card">
+            <!-- Concurrents Directs -->
+            <div id="direct-competitors" class="competition-content">
+              <div class="competition-grid">
+                <div class="stats-section">
+                  <h4><i class="fas fa-chart-pie"></i> Statistiques</h4>
+
+                  <!-- Graphique Typographie vs Iconographie -->
+                  <div class="chart-container">
+                    <h5>Typographie vs Iconographie</h5>
+                    <div class="bar-chart">
+                      <div class="bar-item">
+                        <span class="bar-label">Typographique</span>
+                        <div class="bar-track">
+                          <div class="bar-fill" data-value="15"></div>
+                        </div>
+                        <span class="bar-value">15%</span>
+                      </div>
+                      <div class="bar-item">
+                        <span class="bar-label">Iconographique</span>
+                        <div class="bar-track">
+                          <div class="bar-fill" data-value="85"></div>
+                        </div>
+                        <span class="bar-value">85%</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Graphique Utilisation des Couleurs et Couleurs Dominantes -->
+                  <div class="chart-container">
+                    <div class="chart-row">
+                      <div class="chart-column">
+                        <h5>Utilisation des Couleurs</h5>
+                        <div class="color-usage-chart">
+                          <div class="usage-item">
+                            <div class="usage-label">1 couleur</div>
+                            <div class="usage-bar-container">
+                              <div class="usage-bar" data-value="47">
+                                <div class="usage-fill"></div>
+                              </div>
+                              <div class="usage-value">47%</div>
+                            </div>
+                          </div>
+                          <div class="usage-item">
+                            <div class="usage-label">2 couleurs</div>
+                            <div class="usage-bar-container">
+                              <div class="usage-bar" data-value="38">
+                                <div class="usage-fill"></div>
+                              </div>
+                              <div class="usage-value">38%</div>
+                            </div>
+                          </div>
+                          <div class="usage-item">
+                            <div class="usage-label">3 couleurs</div>
+                            <div class="usage-bar-container">
+                              <div class="usage-bar" data-value="15">
+                                <div class="usage-fill"></div>
+                              </div>
+                              <div class="usage-value">15%</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="chart-column">
+                        <h5>Couleurs Dominantes</h5>
+                        <div class="color-palette">
+                          <div class="color-item" style="background: #ff8c00">
+                            Orange
+                          </div>
+                          <div class="color-item" style="background: #4a90e2">
+                            Bleu
+                          </div>
+                          <div class="color-item" style="background: #000000">
+                            Noir
+                          </div>
+                          <div class="color-item" style="background: #e74c3c">
+                            Rouge
+                          </div>
+                          <div class="color-item" style="background: #27ae60">
+                            Vert
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="forces-section">
+                  <h4><i class="fas fa-check"></i> Forces</h4>
+                  <ul>
+                    <li>Expertise sectorielle affirmée</li>
+                    <li>Identité visuelle cohérente</li>
+                    <li>Messages clairs et directs</li>
+                  </ul>
+                </div>
+                <div class="weaknesses-section">
+                  <h4><i class="fas fa-times"></i> Faiblesses</h4>
+                  <ul>
+                    <li>Design conventionnel</li>
+                    <li>Peu de différenciation</li>
+                    <li>Communication traditionnelle</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Agences de Voyage -->
+            <div id="indirect-agencies" class="competition-content">
+              <div class="competition-grid">
+                <div class="stats-section">
+                  <h4><i class="fas fa-chart-pie"></i> Statistiques</h4>
+
+                  <!-- Graphique Typographie vs Iconographie -->
+                  <div class="chart-container">
+                    <h5>Typographie vs Iconographie</h5>
+                    <div class="bar-chart">
+                      <div class="bar-item">
+                        <span class="bar-label">Typographique</span>
+                        <div class="bar-track">
+                          <div class="bar-fill" data-value="37"></div>
+                        </div>
+                        <span class="bar-value">37%</span>
+                      </div>
+                      <div class="bar-item">
+                        <span class="bar-label">Iconographique</span>
+                        <div class="bar-track">
+                          <div class="bar-fill" data-value="63"></div>
+                        </div>
+                        <span class="bar-value">63%</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Graphique Utilisation des Couleurs et Couleurs Dominantes -->
+                  <div class="chart-container">
+                    <div class="chart-row">
+                      <div class="chart-column">
+                        <h5>Utilisation des Couleurs</h5>
+                        <div class="color-usage-chart">
+                          <div class="usage-item">
+                            <div class="usage-label">1 couleur</div>
+                            <div class="usage-bar-container">
+                              <div class="usage-bar" data-value="50">
+                                <div class="usage-fill"></div>
+                              </div>
+                              <div class="usage-value">50%</div>
+                            </div>
+                          </div>
+                          <div class="usage-item">
+                            <div class="usage-label">2 couleurs</div>
+                            <div class="usage-bar-container">
+                              <div class="usage-bar" data-value="47">
+                                <div class="usage-fill"></div>
+                              </div>
+                              <div class="usage-value">47%</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="chart-column">
+                        <h5>Couleurs Dominantes</h5>
+                        <div class="color-palette">
+                          <div class="color-item" style="background: #4a90e2">
+                            Bleu
+                          </div>
+                          <div class="color-item" style="background: #ff8c00">
+                            Orange
+                          </div>
+                          <div class="color-item" style="background: #1e3a8a">
+                            Bleu foncé
+                          </div>
+                          <div class="color-item" style="background: #ec4899">
+                            Rose
+                          </div>
+                          <div class="color-item" style="background: #e74c3c">
+                            Rouge
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="forces-section">
+                  <h4><i class="fas fa-check"></i> Forces</h4>
+                  <ul>
+                    <li>Large réseau de distribution</li>
+                    <li>Approche équilibrée texte/image</li>
+                    <li>Communication professionnelle</li>
+                  </ul>
+                </div>
+                <div class="weaknesses-section">
+                  <h4><i class="fas fa-times"></i> Faiblesses</h4>
+                  <ul>
+                    <li>Manque de spécialisation</li>
+                    <li>Identités interchangeables</li>
+                    <li>Peu d'innovation digitale</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Associations et Clubs -->
+            <div id="indirect-clubs" class="competition-content">
+              <div class="competition-grid">
+                <div class="stats-section">
+                  <h4><i class="fas fa-chart-pie"></i> Statistiques</h4>
+
+                  <!-- Graphique Typographie vs Iconographie -->
+                  <div class="chart-container">
+                    <h5>Typographie vs Iconographie</h5>
+                    <div class="bar-chart">
+                      <div class="bar-item">
+                        <span class="bar-label">Typographique</span>
+                        <div class="bar-track">
+                          <div class="bar-fill" data-value="1"></div>
+                        </div>
+                        <span class="bar-value">1%</span>
+                      </div>
+                      <div class="bar-item">
+                        <span class="bar-label">Iconographique</span>
+                        <div class="bar-track">
+                          <div class="bar-fill" data-value="99"></div>
+                        </div>
+                        <span class="bar-value">99%</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Graphique Utilisation des Couleurs et Couleurs Dominantes -->
+                  <div class="chart-container">
+                    <div class="chart-row">
+                      <div class="chart-column">
+                        <h5>Utilisation des Couleurs</h5>
+                        <div class="color-usage-chart">
+                          <div class="usage-item">
+                            <div class="usage-label">3 couleurs</div>
+                            <div class="usage-bar-container">
+                              <div class="usage-bar" data-value="55">
+                                <div class="usage-fill"></div>
+                              </div>
+                              <div class="usage-value">55%</div>
+                            </div>
+                          </div>
+                          <div class="usage-item">
+                            <div class="usage-label">1 couleur</div>
+                            <div class="usage-bar-container">
+                              <div class="usage-bar" data-value="45">
+                                <div class="usage-fill"></div>
+                              </div>
+                              <div class="usage-value">45%</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="chart-column">
+                        <h5>Couleurs Dominantes</h5>
+                        <div class="color-palette">
+                          <div class="color-item" style="background: #4a90e2">
+                            Bleu
+                          </div>
+                          <div class="color-item" style="background: #e74c3c">
+                            Rouge
+                          </div>
+                          <div class="color-item" style="background: #27ae60">
+                            Vert
+                          </div>
+                          <div class="color-item" style="background: #eaff02">
+                            Jaune
+                          </div>
+                          <div class="color-item" style="background: #000000">
+                            Noir
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="forces-section">
+                  <h4><i class="fas fa-check"></i> Forces</h4>
+                  <ul>
+                    <li>Forte communauté locale</li>
+                    <li>Approche authentique</li>
+                    <li>Prix compétitifs</li>
+                  </ul>
+                </div>
+                <div class="weaknesses-section">
+                  <h4><i class="fas fa-times"></i> Faiblesses</h4>
+                  <ul>
+                    <li>Design amateur</li>
+                    <li>Présence digitale limitée</li>
+                    <li>Communication non professionnelle</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6.1: Transition Identité visuelle -->
+      <section class="slide slide-transition" id="slide-6-1-transition">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title">IDENTITÉ VISUELLE</h1>
+            <div class="title-line"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6.2: Moodboard -->
+      <section class="slide slide-moodboard" id="slide-6-2">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title"><i class="fas fa-images"></i> MOODBOARD</h1>
+            <div class="title-line"></div>
+          </div>
+          <div class="content-grid">
+            <div class="content-card">
+              <h4>
+                <i class="fas fa-images"></i> Émotions véhiculées par chaque
+                moodboard
+              </h4>
+              <div class="moodboard-buttons">
+                <button class="moodboard-btn" data-moodboard="1">
+                  <i class="fas fa-mountain"></i>
+                  <span>Aventure Immersive</span>
+                </button>
+                <button class="moodboard-btn" data-moodboard="2">
+                  <i class="fas fa-gamepad"></i>
+                  <span>Gamification</span>
+                </button>
+                <button class="moodboard-btn" data-moodboard="3">
+                  <i class="fas fa-leaf"></i>
+                  <span>Écoresponsabilité</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Popup Moodboard Fullscreen -->
+      <div class="moodboard-popup" id="moodboardPopup">
+        <div class="moodboard-popup-content">
+          <button class="moodboard-close" id="moodboardClose">
+            <i class="fas fa-times"></i>
+          </button>
+          <div class="moodboard-popup-inner">
+            <div class="moodboard-image-container">
+              <img
+                class="moodboard-image"
+                id="moodboardImage"
+                src=""
+                alt="Moodboard"
+              />
+            </div>
+            <div class="moodboard-description">
+              <h3 id="moodboardTitle">Titre du Moodboard</h3>
+              <p id="moodboardText">Description des émotions véhiculées...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 6.3: Logotype -->
+      <section class="slide slide-logotype" id="slide-6-3">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title">
+              <i class="fas fa-signature"></i> LOGOTYPE
+            </h1>
+            <div class="title-line"></div>
+          </div>
+
+          <div class="logotype-tabs">
+            <button
+              class="logotype-tab active"
+              data-target="aventure-immersive"
+            >
+              <i class="fas fa-mountain-sun"></i> Aventure Immersive
+            </button>
+            <button class="logotype-tab" data-target="gamification">
+              <i class="fas fa-gamepad"></i> Gamification
+            </button>
+            <button class="logotype-tab" data-target="ecoresponsabilite">
+              <i class="fas fa-leaf"></i> Écoresponsabilité
+            </button>
+          </div>
+
+          <div class="logotype-tabs-container">
+            <!-- Contenu Aventure Immersive -->
+            <div id="aventure-immersive" class="logotype-content active">
+              <div class="logotype-header">
+                <h3 class="logotype-main-title">
+                  La Puissance et l'Orientation dans l'Exploration
+                </h3>
+              </div>
+              <div class="logo-variations">
+                <div class="logo-item">
+                  <div class="logo-images">
+                    <div class="logo-wrapper">
+                      <img
+                        src="assets/logo-axes/axe1-1.svg"
+                        alt="Triangle + Éclair - Version claire"
+                      />
+                    </div>
+                    <div class="logo-wrapper dark">
+                      <img
+                        src="assets/logo-axes/axe1-1-black.svg"
+                        alt="Triangle + Éclair - Version sombre"
+                      />
+                    </div>
+                  </div>
+                  <div class="logo-description">
+                    <h4>Triangle + Éclair</h4>
+                  </div>
+                </div>
+                <div class="logo-item">
+                  <div class="logo-images">
+                    <div class="logo-wrapper">
+                      <img
+                        src="assets/logo-axes/axe1-2.svg"
+                        alt="Triangle avec Montagnes et Sentier - Version claire"
+                      />
+                    </div>
+                    <div class="logo-wrapper dark">
+                      <img
+                        src="assets/logo-axes/axe1-2-black.svg"
+                        alt="Triangle avec Montagnes et Sentier - Version sombre"
+                      />
+                    </div>
+                  </div>
+                  <div class="logo-description">
+                    <h4>Triangle avec Montagnes et Sentier</h4>
+                  </div>
+                </div>
+                <div class="logo-item">
+                  <div class="logo-images">
+                    <div class="logo-wrapper">
+                      <img
+                        src="assets/logo-axes/axe1-3.svg"
+                        alt="Boussole et Montagnes - Version claire"
+                      />
+                    </div>
+                    <div class="logo-wrapper dark">
+                      <img
+                        src="assets/logo-axes/axe1-3-black.svg"
+                        alt="Boussole et Montagnes - Version sombre"
+                      />
+                    </div>
+                  </div>
+                  <div class="logo-description">
+                    <h4>Boussole et Montagnes</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contenu Gamification -->
+            <div id="gamification" class="logotype-content">
+              <div class="logotype-header">
+                <h3 class="logotype-main-title">
+                  L'Ascension et la Modernité du Trekking
+                </h3>
+              </div>
+              <div class="logo-variations">
+                <div class="logo-item">
+                  <div class="logo-images">
+                    <div class="logo-wrapper">
+                      <img
+                        src="assets/logo-axes/axe2-1.svg"
+                        alt="Cercle + Montagnes Stylisées - Version claire"
+                      />
+                    </div>
+                    <div class="logo-wrapper dark">
+                      <img
+                        src="assets/logo-axes/axe2-1-black.svg"
+                        alt="Cercle + Montagnes Stylisées - Version sombre"
+                      />
+                    </div>
+                  </div>
+                  <div class="logo-description">
+                    <h4>Cercle + Montagnes Stylisées</h4>
+                  </div>
+                </div>
+                <div class="logo-item">
+                  <div class="logo-images">
+                    <div class="logo-wrapper">
+                      <img
+                        src="assets/logo-axes/axe2-2.svg"
+                        alt="TREKKS Typographique + Montagnes en «K» - Version claire"
+                      />
+                    </div>
+                    <div class="logo-wrapper dark">
+                      <img
+                        src="assets/logo-axes/axe2-2-black.svg"
+                        alt="TREKKS Typographique + Montagnes en «K» - Version sombre"
+                      />
+                    </div>
+                  </div>
+                  <div class="logo-description">
+                    <h4>TREKKS Typographique + Montagnes en «K»</h4>
+                  </div>
+                </div>
+                <div class="logo-item">
+                  <div class="logo-images">
+                    <div class="logo-wrapper">
+                      <img
+                        src="assets/logo-axes/axe2-3.svg"
+                        alt="Montagnes en Traits Bruts + TREKKS - Version claire"
+                      />
+                    </div>
+                    <div class="logo-wrapper dark">
+                      <img
+                        src="assets/logo-axes/axe2-3-black.svg"
+                        alt="Montagnes en Traits Bruts + TREKKS - Version sombre"
+                      />
+                    </div>
+                  </div>
+                  <div class="logo-description">
+                    <h4>Montagnes en Traits Bruts + TREKKS</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contenu Écoresponsabilité -->
+            <div id="ecoresponsabilite" class="logotype-content">
+              <div class="logotype-header">
+                <h3 class="logotype-main-title">
+                  L'Aventure Durable et Immersive dans la Nature
+                </h3>
+              </div>
+              <div class="logo-variations">
+                <div class="logo-item">
+                  <div class="logo-images">
+                    <div class="logo-wrapper">
+                      <img
+                        src="assets/logo-axes/axe3-1.svg"
+                        alt="Feuille & Sentier - Version claire"
+                      />
+                    </div>
+                    <div class="logo-wrapper dark">
+                      <img
+                        src="assets/logo-axes/axe3-1-black.svg"
+                        alt="Feuille & Sentier - Version sombre"
+                      />
+                    </div>
+                  </div>
+                  <div class="logo-description">
+                    <h4>Feuille & Sentier</h4>
+                  </div>
+                </div>
+                <div class="logo-item">
+                  <div class="logo-images">
+                    <div class="logo-wrapper">
+                      <img
+                        src="assets/logo-axes/axe3-2.svg"
+                        alt="Paysage de Montagnes avec un Chemin - Version claire"
+                      />
+                    </div>
+                    <div class="logo-wrapper dark">
+                      <img
+                        src="assets/logo-axes/axe3-2-black.svg"
+                        alt="Paysage de Montagnes avec un Chemin - Version sombre"
+                      />
+                    </div>
+                  </div>
+                  <div class="logo-description">
+                    <h4>Paysage de Montagnes avec un Chemin</h4>
+                  </div>
+                </div>
+                <div class="logo-item">
+                  <div class="logo-images">
+                    <div class="logo-wrapper">
+                      <img
+                        src="assets/logo-axes/axe3-3.svg"
+                        alt="Montagne & Plantes - Version claire"
+                      />
+                    </div>
+                    <div class="logo-wrapper dark">
+                      <img
+                        src="assets/logo-axes/axe3-3-black.svg"
+                        alt="Montagne & Plantes - Version sombre"
+                      />
+                    </div>
+                  </div>
+                  <div class="logo-description">
+                    <h4>Montagne & Plantes</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6.3 Final: Choix final -->
+      <section class="slide slide-final-choice" id="slide-6-3-final">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title">
+              <i class="fas fa-check-circle"></i> CHOIX FINAL DU LOGOTYPE
+            </h1>
+            <div class="title-line"></div>
+          </div>
+
+          <div class="final-choice-grid">
+            <div class="final-choice-points">
+              <ul>
+                <li>
+                  <h4>Un nom percutant</h4>
+                </li>
+                <li>
+                  <h4>Un design fort et identifiable</h4>
+                </li>
+                <li>
+                  <h4>Une identité unique</h4>
+                </li>
+                <li>
+                  <h4>Cohérence graphique</h4>
+                </li>
+                <li>
+                  <h4>Visibilité et impact</h4>
+                </li>
+                <li>
+                  <h4>Un concept immersif</h4>
+                </li>
+              </ul>
+            </div>
+            <div class="final-choice-logo-area">
+              <div class="logo-display-final">
+                <img
+                  src="assets/logo-w_b.svg"
+                  alt="Logo final de TREKKS"
+                  class="final-logo-image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6.4: Couleurs -->
+      <section class="slide slide-colors" id="slide-6-4">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title"><i class="fas fa-palette"></i> COULEURS</h1>
+            <div class="title-line"></div>
+          </div>
+          <div class="color-palette-container">
+            <h3 class="palette-main-title">
+              Une palette pensée pour guider, signaler et faire vibrer
+            </h3>
+            <div class="palette-grid">
+              <div
+                class="color-card"
+                style="--color-bg: #ffef36; --color-text: #000000"
+              >
+                <div class="color-card-content">
+                  <h4 class="color-name">JAUNE</h4>
+                  <ul class="color-codes">
+                    <li><strong>HEX :</strong> #FFEF36</li>
+                    <li><strong>CMJN :</strong> 3, 0, 79, 0</li>
+                    <li><strong>RVB :</strong> 255, 239, 54</li>
+                    <li><strong>PANTONE :</strong> 107 C</li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                class="color-card"
+                style="--color-bg: #020a0a; --color-text: #ffffff"
+              >
+                <div class="color-card-content">
+                  <h4 class="color-name">NOIR</h4>
+                  <ul class="color-codes">
+                    <li><strong>HEX :</strong> #020A0A</li>
+                    <li><strong>CMJN :</strong> 78, 71, 64, 85</li>
+                    <li><strong>RVB :</strong> 2, 10, 10</li>
+                    <li><strong>PANTONE :</strong> BLACK 6 C</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="color-card-white">
+                <div class="color-card-content">
+                  <h4 class="color-name">BLANC</h4>
+                  <ul class="color-codes">
+                    <li><strong>HEX :</strong> #FCFFFF</li>
+                    <li><strong>CMJN :</strong> 0, 0, 0, 0</li>
+                    <li><strong>RVB :</strong> 252, 255, 255</li>
+                    <li><strong>PANTONE :</strong> WHITE</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6.5: Typographies -->
+      <section class="slide slide-typos" id="slide-6-5">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title">
+              <i class="fas fa-font"></i> TYPOGRAPHIES
+            </h1>
+            <div class="title-line"></div>
+          </div>
+          <div class="typography-container">
+            <!-- Proxima Nova -->
+            <div class="font-display-card">
+              <div class="font-info-panel proxima-nova-panel">
+                <div class="font-info-content">
+                  <h3 class="font-role">PRIMAIRE</h3>
+                  <p class="font-description">
+                    Typographie élégante et lisible.
+                  </p>
+                </div>
+                <p class="font-keywords">MODERNE - LISIBLE - POLYVALENTE</p>
+              </div>
+              <div class="font-specimen-panel">
+                <h2 class="font-main-name font-proxima-nova">PROXIMA NOVA</h2>
+                <div class="font-showcase-large font-proxima-nova">AaBbCc</div>
+                <div class="font-showcase-baseline font-proxima-nova">
+                  PLAY YOUR TREK
+                </div>
+              </div>
+            </div>
+            <!-- Shuttleblock -->
+            <div class="font-display-card">
+              <div class="font-info-panel shuttleblock-panel">
+                <div class="font-info-content">
+                  <h3 class="font-role font-shuttleblock">SECONDAIRE</h3>
+                  <p class="font-description font-shuttleblock">
+                    Typographie futuriste et audacieuse.
+                  </p>
+                </div>
+                <p class="font-keywords font-shuttleblock">
+                  DYNAMIQUE - FUTURISTE - IMPACTANT
+                </p>
+              </div>
+              <div class="font-specimen-panel">
+                <h2 class="font-main-name">SHUTTLEBLOCK</h2>
+                <div class="font-showcase-large font-shuttleblock">AaBbCc</div>
+                <div class="font-showcase-baseline font-shuttleblock">
+                  PLAY YOUR TREK
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6.6: Logo -->
+      <section class="slide slide-logo-summary" id="slide-6-6">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title">
+              <img
+                src="assets/decli.svg"
+                class="slide-title-icon"
+                alt="Logo icon"
+              />LOGO
+            </h1>
+            <div class="title-line"></div>
+          </div>
+          <div class="logo-variations-grid">
+            <div class="logo-variation-item">
+              <div class="logo-variation-bg" style="background-color: #020a0a">
+                <img
+                  src="assets/logo-w_b.svg"
+                  alt="Logo TREKKS version blanche"
+                />
+              </div>
+            </div>
+            <div class="logo-variation-item">
+              <div class="logo-variation-bg" style="background-color: #ffffff">
+                <img
+                  src="assets/logo-black.svg"
+                  alt="Logo TREKKS version noire"
+                />
+              </div>
+            </div>
+            <div class="logo-variation-item">
+              <div class="logo-variation-bg" style="background-color: #ffffff">
+                <img
+                  src="assets/logo-trekks.svg"
+                  alt="Logo TREKKS version couleur"
+                />
+              </div>
+            </div>
+            <div class="logo-variation-item">
+              <div class="logo-variation-bg" style="background-color: #020a0a">
+                <img src="assets/decli-white.svg" alt="Déclinaison blanche" />
+              </div>
+            </div>
+            <div class="logo-variation-item">
+              <div class="logo-variation-bg" style="background-color: #ffffff">
+                <img src="assets/decli-black.svg" alt="Déclinaison noire" />
+              </div>
+            </div>
+            <div class="logo-variation-item">
+              <div class="logo-variation-bg" style="background-color: #ffffff">
+                <img src="assets/decli.svg" alt="Déclinaison couleur" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Popup Logo Fullscreen -->
+      <div class="logo-popup" id="logoPopup">
+        <div class="logo-popup-content">
+          <button class="logo-popup-close" id="logoPopupClose">
+            <i class="fas fa-times"></i>
+          </button>
+          <div class="logo-popup-inner">
+            <img
+              class="logo-popup-image"
+              id="logoPopupImage"
+              src=""
+              alt="Logo en grand"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 6.7: Résumé de la DA -->
+      <section class="slide slide-da" id="slide-6-7">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title">
+              <i class="fas fa-eye"></i> RÉSUMÉ DE LA DA
+            </h1>
+            <div class="title-line"></div>
+          </div>
+          <div class="da-bento-grid">
+            <div class="bento-item">
+              <h4>
+                <img
+                  src="assets/decli.svg"
+                  class="bento-item-icon"
+                  alt="Logo icon"
+                />
+                Logo Impactant
+              </h4>
+              <p>
+                Le "K" symbolise la montagne, la direction et le "play",
+                incarnant notre concept de gamification.
+              </p>
+              <img
+                src="assets/logo-white.svg"
+                alt="Logo TREKKS"
+                class="bento-item-logo"
+              />
+            </div>
+            <div class="bento-item">
+              <h4><i class="fas fa-palette"></i> Palette Énergique</h4>
+              <p>
+                L'association du jaune vif et du noir profond crée un contraste
+                fort qui garantit visibilité et impact.
+              </p>
+              <div class="bento-color-palette">
+                <div
+                  class="bento-color-swatch"
+                  style="background-color: #ffef36"
+                ></div>
+                <div
+                  class="bento-color-swatch"
+                  style="background-color: #020a0a"
+                ></div>
+                <div
+                  class="bento-color-swatch"
+                  style="background-color: #fcfcfc; border: 1px solid #ddd"
+                ></div>
+              </div>
+            </div>
+            <div class="bento-item">
+              <h4><i class="fas fa-font"></i>Typographies</h4>
+              <p>
+                L'équilibre entre la lisibilité de Proxima Nova et le caractère
+                futuriste de Shuttleblock pour les titres.
+              </p>
+              <div class="bento-typo-preview">
+                <div class="bento-typo-item font-proxima-nova">
+                  Proxima Nova
+                </div>
+                <div class="bento-typo-item font-shuttleblock">
+                  Shuttleblock
+                </div>
+              </div>
+            </div>
+            <div class="bento-item">
+              <h4><i class="fas fa-check-double"></i> Conclusion</h4>
+              <p>
+                La DA de TREKKS est audacieuse, structurée et narrative,
+                invitant à "jouer son propre trek".
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7: Transition Intégration WordPress -->
+      <section class="slide slide-transition" id="slide-7-transition">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title">INTÉGRATION WEB</h1>
+            <div class="title-line"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7.1: Arborescence -->
+      <section class="slide slide-arborescence" id="slide-7-1">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title">
+              <i class="fas fa-sitemap"></i> ARBORESCENCE
+            </h1>
+            <div class="title-line"></div>
+          </div>
+          <div class="sitemap">
+            <div class="sitemap-item">
+              <div class="sitemap-node logo sitemap-trigger">
+                <img src="assets/logo-trekks.svg" alt="Logo TREKKS" />
+              </div>
+              <div class="sitemap-item-children level-1 collapsible collapsed">
+                <div class="sitemap-item">
+                  <div class="sitemap-node sitemap-trigger">ACCUEIL</div>
+                  <div
+                    class="sitemap-item-children level-2 collapsible collapsed"
+                  >
+                    <div class="sitemap-item">
+                      <div class="sitemap-node small">
+                        ANNAPURNA<br />DISCOVERY
+                      </div>
+                    </div>
+                    <div class="sitemap-item">
+                      <div class="sitemap-node small">
+                        GREAT OCEAN<br />WALK
+                      </div>
+                    </div>
+                    <div class="sitemap-item">
+                      <div class="sitemap-node small">JUNGLE<br />TREK</div>
+                    </div>
+                    <div class="sitemap-item">
+                      <div class="sitemap-node small">
+                        KILIMANDJARO<br />SUMMIT
+                      </div>
+                    </div>
+                    <div class="sitemap-item">
+                      <div class="sitemap-node small">
+                        MONT-BLANC<br />EXPRESS
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sitemap-item">
+                  <div class="sitemap-node sitemap-trigger">NOS TREKS</div>
+                  <div
+                    class="sitemap-item-children level-2 collapsible collapsed"
+                  >
+                    <div class="sitemap-item">
+                      <div class="sitemap-node small">
+                        ANNAPURNA<br />DISCOVERY
+                      </div>
+                    </div>
+                    <div class="sitemap-item">
+                      <div class="sitemap-node small">
+                        GREAT OCEAN<br />WALK
+                      </div>
+                    </div>
+                    <div class="sitemap-item">
+                      <div class="sitemap-node small">JUNGLE<br />TREK</div>
+                    </div>
+                    <div class="sitemap-item">
+                      <div class="sitemap-node small">
+                        KILIMANDJARO<br />SUMMIT
+                      </div>
+                    </div>
+                    <div class="sitemap-item">
+                      <div class="sitemap-node small">
+                        MONT-BLANC<br />EXPRESS
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sitemap-item">
+                  <div class="sitemap-node sitemap-trigger">À PROPOS</div>
+                </div>
+                <div class="sitemap-item">
+                  <div class="sitemap-node sitemap-trigger">CONTACT</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7.2: Wireframes -->
+      <section class="slide slide-wireframes" id="slide-7-2">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title">
+              <i class="fas fa-pencil-ruler"></i> WIREFRAMES
+            </h1>
+            <div class="title-line"></div>
+          </div>
+          <div class="wireframes-layout">
+            <div class="wireframes-description">
+              <div class="content-card">
+                <h4>
+                  <i class="fas fa-drafting-compass"></i> Structure et Ergonomie
+                </h4>
+                <ul>
+                  <li>UX centrée sur l'exploration et la gamification</li>
+                  <li>Architecture de l'information claire</li>
+                  <li>Parcours utilisateur optimisé pour la conversion</li>
+                  <li>Principes de navigation fluide et intuitive</li>
+                </ul>
+              </div>
+            </div>
+            <div class="wireframes-gallery">
+              <div class="wireframe-item">
+                <img
+                  src="assets/wireframe/wireframe-home.png"
+                  alt="Wireframe page d'accueil"
+                />
+                <div class="wireframe-caption">Accueil Desktop</div>
+              </div>
+              <div class="wireframe-item">
+                <img
+                  src="assets/wireframe/wireframe-mobile-home.png"
+                  alt="Wireframe page d'accueil mobile"
+                />
+                <div class="wireframe-caption">Accueil Mobile</div>
+              </div>
+              <div class="wireframe-item">
+                <img
+                  src="assets/wireframe/wireframe-trek.png"
+                  alt="Wireframe page trek"
+                />
+                <div class="wireframe-caption">Page Trek Desktop</div>
+              </div>
+              <div class="wireframe-item">
+                <img
+                  src="assets/wireframe/wireframe-trek-mobile.png"
+                  alt="Wireframe page trek mobile"
+                />
+                <div class="wireframe-caption">Page Trek Mobile</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7.2b: Maquettes -->
+      <section class="slide slide-maquettes" id="slide-7-2-maquettes">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title">
+              <i class="fas fa-desktop"></i> MAQUETTES
+            </h1>
+            <div class="title-line"></div>
+          </div>
+          <div class="maquettes-layout">
+            <div class="maquettes-description">
+              <div class="content-card">
+                <h4>
+                  <i class="fas fa-palette"></i> Design d'Interface Immersif
+                </h4>
+                <ul>
+                  <li>Application de l'identité visuelle TREKKS</li>
+                  <li>Scroll immersif et narratif</li>
+                  <li>Interfaces inspirées des codes du gaming</li>
+                  <li>Design system cohérent et réutilisable</li>
+                </ul>
+              </div>
+            </div>
+            <div class="maquettes-gallery">
+              <div class="maquette-item">
+                <img
+                  src="assets/maquette/maquette-home.png"
+                  alt="Maquette page d'accueil"
+                />
+                <div class="maquette-caption">Accueil Desktop</div>
+              </div>
+              <div class="maquette-item">
+                <img
+                  src="assets/maquette/maquette-mobile-home.png"
+                  alt="Maquette page d'accueil mobile"
+                />
+                <div class="maquette-caption">Accueil Mobile</div>
+              </div>
+              <div class="maquette-item">
+                <img
+                  src="assets/maquette/maquette-trek.png"
+                  alt="Maquette page trek"
+                />
+                <div class="maquette-caption">Page Trek Desktop</div>
+              </div>
+              <div class="maquette-item">
+                <img
+                  src="assets/maquette/maquette-mobile-trek.png"
+                  alt="Maquette page trek mobile"
+                />
+                <div class="maquette-caption">Page Trek Mobile</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7.3: Démo Site Live -->
+      <section class="slide slide-demo" id="slide-7-3">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title">
+              <i class="fas fa-qrcode"></i> SITE INTERNET
+            </h1>
+            <div class="title-line"></div>
+          </div>
+          <div class="demo-layout">
+            <div class="demo-description">
+              <div class="content-card">
+                <h4>Scannez le QR code pour explorer l'expérience TREKKS</h4>
+              </div>
+            </div>
+            <div class="qr-code-display">
+              <a
+                href="https://jeremy.uiccilyon.fr/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="assets/qr-code-site.svg"
+                  alt="QR Code du site TREKKS"
+                  class="qr-code-image"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7.4: Plugins majeurs -->
+      <section class="slide slide-plugins" id="slide-7-4">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title">
+              <i class="fas fa-plug"></i> PLUGINS MAJEURS
+            </h1>
+            <div class="title-line"></div>
+          </div>
+          <div class="plugins-layout">
+            <div class="plugins-description">
+              <div class="content-card">
+                <h4><i class="fas fa-plug"></i> Technologies utilisées</h4>
+                <ul>
+                  <li>
+                    <strong>Elementor & Elementor Pro</strong> - Page builder
+                    avancé
+                  </li>
+                  <li><strong>Hello Theme</strong> - Thème de base léger</li>
+                  <li>
+                    <strong>Thème enfant</strong> - Personnalisations avancées
+                  </li>
+                  <li>
+                    <strong>CSS/JS full custom</strong> (GSAP, ScrollTrigger,
+                    Splitting.js, Lenis)
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="plugins-images">
+              <div class="plugin-image-item">
+                <img
+                  src="assets/elementor.svg"
+                  alt="Logo Elementor"
+                  class="plugin-image"
+                />
+                <div class="plugin-caption">Elementor</div>
+              </div>
+              <div class="plugin-image-item">
+                <img
+                  src="assets/hello-elementor-theme.webp"
+                  alt="Hello Elementor Theme"
+                  class="plugin-image"
+                />
+                <div class="plugin-caption">Hello Theme</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7.5: Optimisation Sécurité -->
+      <section class="slide slide-optimisation" id="slide-7-5">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title">
+              <i class="fas fa-shield-alt"></i> OPTIMISATIONS TECHNIQUES
+            </h1>
+            <div class="title-line"></div>
+          </div>
+
+          <div class="optimisation-tabs">
+            <button class="optimisation-tab active" data-target="opti-securite">
+              <i class="fas fa-lock"></i> Sécurité
+            </button>
+            <button class="optimisation-tab" data-target="opti-poids">
+              <i class="fas fa-weight-hanging"></i> Poids des médias
+            </button>
+            <button class="optimisation-tab" data-target="opti-vitesse">
+              <i class="fas fa-rocket"></i> Vitesse
+            </button>
+            <button class="optimisation-tab" data-target="opti-seo">
+              <i class="fas fa-search"></i> SEO
+            </button>
+          </div>
+
+          <div class="optimisation-tabs-container">
+            <!-- Sécurité -->
+            <div id="opti-securite" class="optimisation-content active">
+              <div class="optimisation-layout">
+                <div class="optimisation-image">
+                  <img
+                    src="assets/optimisation/securite.jpg"
+                    alt="Optimisation sécurité SecuPress"
+                  />
+                </div>
+                <div class="optimisation-text">
+                  <h4>Actions mises en place</h4>
+                  <ul>
+                    <li>Forçage du HTTPS sur toutes les pages</li>
+                    <li>
+                      Redirection automatique + correction des contenus mixtes
+                    </li>
+                  </ul>
+                  <h4>Analyse complète du site</h4>
+                  <ul>
+                    <li>Résultat : B+ avec 28 critères de sécurité validés</li>
+                  </ul>
+                  <h4>Mesures supplémentaires</h4>
+                  <ul>
+                    <li>
+                      Mise à jour régulière de WordPress, plugins et thèmes
+                    </li>
+                    <li>
+                      Limitation des plugins à ceux strictement nécessaires
+                    </li>
+                    <li>Protection contre le spam via reCAPTCHA</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Poids des médias -->
+            <div id="opti-poids" class="optimisation-content">
+              <div class="optimisation-layout">
+                <div class="optimisation-image">
+                  <img
+                    src="assets/optimisation/poids-medias.jpg"
+                    alt="Optimisation poids des médias"
+                  />
+                </div>
+                <div class="optimisation-text">
+                  <h4>Médias légers et adaptés</h4>
+                  <ul>
+                    <li>
+                      Conversion de toutes les images en WebP pour un meilleur
+                      rapport qualité/poids
+                    </li>
+                    <li>
+                      Vidéo de fond optimisée au format .webm (12.9 Mo → 865 KB)
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Vitesse -->
+            <div id="opti-vitesse" class="optimisation-content">
+              <div class="optimisation-layout">
+                <div class="optimisation-image">
+                  <img
+                    src="assets/optimisation/vitesse.jpg"
+                    alt="Optimisation vitesse GTMetrix"
+                  />
+                </div>
+                <div class="optimisation-text">
+                  <h4>Résultats GTMetrix</h4>
+                  <ul>
+                    <li>Score B (80%)</li>
+                    <li>LCP (Largest Contentful Paint) : 1.8 secondes</li>
+                    <li>Total Blocking Time : 328ms</li>
+                    <li>Cumulative Layout Shift : 0</li>
+                  </ul>
+                  <h4>Objectif atteint</h4>
+                  <p>
+                    Un site rapide, fluide et immersif, où les performances
+                    techniques soutiennent l'expérience utilisateur sans la
+                    freiner.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- SEO -->
+            <div id="opti-seo" class="optimisation-content">
+              <div class="optimisation-layout">
+                <div class="optimisation-image">
+                  <img
+                    src="assets/optimisation/seo.jpg"
+                    alt="Optimisation SEO Rank Math"
+                  />
+                </div>
+                <div class="optimisation-text">
+                  <h4>Référencement naturel – Page d'accueil</h4>
+                  <p>
+                    Optimisation du SEO dès la page d'accueil à l'aide du plugin
+                    Rank Math pour maximiser la visibilité.
+                  </p>
+                  <h4>Mots-clés stratégiques ciblés</h4>
+                  <p>trek, agence de trekking, agence de voyage Lyon...</p>
+                  <p>
+                    Ces mots-clés ont été intégrés dans le titre SEO, la meta
+                    description, le contenu et les balises ALT des images.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8: Transition Marketing -->
+      <section class="slide slide-transition" id="slide-8-transition">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title">MARKETING</h1>
+            <div class="title-line"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8.1: Personas -->
+      <section class="slide slide-personas" id="slide-8-1">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title">
+              <i class="fas fa-user-friends"></i> PERSONAS
+            </h1>
+            <div class="title-line"></div>
+          </div>
+          <div class="content-card">
+            <div class="target-analysis">
+              <div class="persona">
+                <h4>
+                  <img
+                    src="assets/thomas.jpg"
+                    alt="Thomas"
+                    class="persona-image"
+                  />
+                  Thomas (29 ans, UX designer)
+                </h4>
+                <p>
+                  <strong>Motivations :</strong> Immersion, storytelling, défis.
+                </p>
+                <p>
+                  <strong>Attentes :</strong> Expérience unique, gamification,
+                  communauté.
+                </p>
+                <p>
+                  <strong>Comportement :</strong> Connecté, recherche
+                  d'expériences innovantes
+                </p>
+              </div>
+              <div class="persona">
+                <h4>
+                  <img
+                    src="assets/brigitte.jpg"
+                    alt="Brigitte"
+                    class="persona-image"
+                  />
+                  Brigitte (40 ans, RSE)
+                </h4>
+                <p>
+                  <strong>Motivations :</strong> Écologie, communauté, valeurs
+                  fortes.
+                </p>
+                <p>
+                  <strong>Attentes :</strong> Authenticité, engagement, sens.
+                </p>
+                <p>
+                  <strong>Comportement :</strong> Engagée, recherche de sens
+                  dans ses activités.
+                </p>
+              </div>
+            </div>
+            <p>
+              <strong>Forces et freins analysés :</strong> Manque de temps,
+              besoin de sens, méfiance envers le tourisme de masse.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8.2: Objectifs stratégiques -->
+      <section class="slide slide-objectifs" id="slide-8-2">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title">
+              <i class="fas fa-chart-line"></i> OBJECTIFS STRATÉGIQUES
+            </h1>
+            <div class="title-line"></div>
+          </div>
+          <div
+            class="content-grid"
+            style="grid-template-columns: repeat(3, 1fr); gap: 1.5rem"
+          >
+            <div class="content-card">
+              <h4><i class="fas fa-lightbulb"></i> Le Concept</h4>
+              <p>
+                <strong>Fusionner aventure réelle et gamification</strong>
+                <ul>
+                  <li>Une expérience unique, différenciante.</li>
+                </ul>
+              </p>
+            </div>
+            <div class="content-card">
+              <h4><i class="fas fa-bullseye"></i> L'Enjeu Double</h4>
+              <ul>
+                <li>
+                  Faire connaître le concept à une audience curieuse.
+                </li>
+                <li>
+                  Fédérer une communauté engagée (voyage, jeu, dépassement).
+                </li>
+              </ul>
+            </div>
+            <div class="content-card">
+              <h4><i class="fas fa-cogs"></i> Canaux d'Action</h4>
+              <ul>
+                <li>
+                  <strong>SEO :</strong> contenu riche, optimisation & mots-clés.
+                </li>
+                <li>
+                  <strong>Réseaux Sociaux :</strong> storytelling + défis visuels.
+                </li>
+                <li>
+                  <strong>Newsletter :</strong> contenus exclusifs & challenges.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8.3: Supports de communication -->
+      <section class="slide slide-supports" id="slide-8-3">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title">
+              <i class="fas fa-envelope"></i> EMAILING
+            </h1>
+            <div class="title-line"></div>
+          </div>
+          <div class="emailing-layout">
+            <div class="emailing-visuals">
+              <div class="email-mockup-container">
+                <div class="email-mockup">
+                  <div class="email-header">
+                    <img src="assets/logo-trekks.svg" alt="TREKKS Logo" />
+                  </div>
+                  <div class="email-body">
+                    <h3>Transformez chaque trek en expérience inoubliable</h3>
+                    <p>
+                      TREKKS est une agence de trekking basée à Lyon qui allie
+                      aventure, exploration et gamification. Grâce à notre
+                      plateforme immersive, chaque trek devient une mission à
+                      accomplir, avec des objectifs, des récompenses, et une
+                      vraie sensation de progression.
+                    </p>
+                    <p>
+                      Découvrez nos parcours exclusifs, débloquez des badges,
+                      gagnez des XP et suivez vos exploits en temps réel. Que
+                      vous soyez seul, en duo ou en équipe, l'expérience TREKKS
+                      s'adapte à votre niveau et à votre style.
+                    </p>
+                    <p>
+                      <strong>Nouveau ce mois-ci :</strong> le trek
+                      <em>Mont-Blanc Express</em>.
+                    </p>
+                    <img
+                      src="https://jeremy.uiccilyon.fr/wp-content/themes/hello-elementor-child/assets/mont-blanc.webp"
+                      alt="Mont-Blanc Express"
+                      class="email-image"
+                    />
+                    <div class="email-cta-container">
+                      <a href="#" class="email-cta">PLAY YOUR TREK</a>
+                    </div>
+                  </div>
+                  <div class="email-footer">
+                    <div class="email-social-icons">
+                      <a href="#"><i class="fab fa-facebook"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                      <a href="#"><i class="fab fa-tiktok"></i></a>
+                      <a href="#"><i class="fab fa-linkedin"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <p>© TREKKS - 2025<br />Se désabonner</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="emailing-description">
+              <div class="content-card">
+                <h4>
+                  <i class="fas fa-paper-plane"></i> Communication Directe
+                </h4>
+                <ul>
+                  <li>
+                    Lien personnalisé avec la communauté.
+                  </li>
+                  <li>
+                    Partage des news, badges et offres exclusives.
+                  </li>
+                </ul>
+                <h4><i class="fas fa-chart-bar"></i> Pilotage & Analyse</h4>
+                <ul>
+                  <li>
+                    Automatisation & tracking via Mailchimp.
+                  </li>
+                  <li>
+                    Suivi en temps réel pour affiner les campagnes.
+                  </li>
+                </ul>
+                <h4><i class="fas fa-palette"></i> Expérience Cohérente</h4>
+                <ul>
+                  <li>
+                    Design 100 % TREKKS, fluide & responsive.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8.4: Exemples de publications -->
+      <section class="slide slide-publications" id="slide-8-4">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title">
+              <i class="fas fa-share-alt"></i> EXEMPLES DE PUBLICATIONS
+            </h1>
+            <div class="title-line"></div>
+          </div>
+          <div class="publications-layout">
+            <div class="phone-mockup">
+              <div class="phone-screen">
+                <!-- Contenu de la première maquette -->
+                <img
+                  src="assets/post-insta/post1.png"
+                  alt="Publication sur le Mont-Blanc Express"
+                  class="publication-image"
+                />
+              </div>
+            </div>
+            <div class="phone-mockup">
+              <div class="phone-screen">
+                <!-- Contenu de la deuxième maquette -->
+                <img
+                  src="assets/post-insta/post2.png"
+                  alt="Publication sur la communauté TREKKS"
+                  class="publication-image"
+                />
+              </div>
+            </div>
+            <!-- Capture d'écran de la vidéo -->
+            <div style="position: relative; display: inline-block">
+              <img
+                src="assets/video-screenshot.png"
+                alt="Capture d'écran de la vidéo de présentation"
+                style="
+                  width: 680px;
+                  height: 340px;
+                  object-fit: cover;
+                  border-radius: 10px;
+                  box-shadow: var(--shadow);
+                "
+              />
+              <div
+                style="
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  background: rgba(0, 0, 0, 0.7);
+                  border-radius: 50%;
+                  width: 80px;
+                  height: 80px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 3px solid var(--color-accent);
+                "
+              >
+                <i
+                  class="fas fa-play"
+                  style="
+                    color: var(--color-accent);
+                    font-size: 2rem;
+                    margin-left: 5px;
+                  "
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8.5: Calendrier éditorial -->
+      <section class="slide slide-calendrier" id="slide-8-5">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title">
+              <i class="fas fa-calendar-check"></i> CALENDRIER ÉDITORIAL
+            </h1>
+            <div class="title-line"></div>
+          </div>
+
+          <div class="calendar-tabs">
+            <button class="calendar-tab active" data-target="september">
+              Septembre
+            </button>
+            <button class="calendar-tab" data-target="october">Octobre</button>
+          </div>
+
+          <div class="calendar-container">
+            <!-- Calendrier Septembre -->
+            <div id="september" class="calendar-content active">
+              <div class="calendar-grid">
+                <!-- En-têtes -->
+                <div class="calendar-header"></div>
+                <div class="calendar-header">Lundi</div>
+                <div class="calendar-header">Mardi</div>
+                <div class="calendar-header">Mercredi</div>
+                <div class="calendar-header">Jeudi</div>
+                <div class="calendar-header">Vendredi</div>
+                <div class="calendar-header">Samedi</div>
+                <div class="calendar-header">Dimanche</div>
+
+                <!-- Semaine 1 -->
+                <div class="calendar-week">Semaine 1</div>
+                <div class="calendar-day">
+                  <p><strong>Présentation trek :</strong> Mont-Blanc Express</p>
+                  <small>Obj: Inspirer, découverte</small>
+                  <div class="social-icons">
+                    <i class="fab fa-facebook-f"></i
+                    ><i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day">
+                  <p>
+                    <strong>Mini défi vidéo :</strong> "Quel est ton style de
+                    trekkeur ?"
+                  </p>
+                  <small>Obj: Engagement, viralité</small>
+                  <div class="social-icons"><i class="fab fa-tiktok"></i></div>
+                </div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day">
+                  <p><strong>Post :</strong> Engagements écoresponsables</p>
+                  <small>Obj: Crédibilité, valeurs</small>
+                  <div class="social-icons">
+                    <i class="fab fa-linkedin-in"></i>
+                  </div>
+                </div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day">
+                  <p><strong>Story :</strong> Sondage interactif</p>
+                  <small>Obj: Engagement, interaction</small>
+                  <div class="social-icons">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+
+                <!-- Semaine 2 -->
+                <div class="calendar-week">Semaine 2</div>
+                <div class="calendar-day">
+                  <p><strong>Reel :</strong> Time-lapse d'un trek</p>
+                  <small>Obj: Emotion, immersion</small>
+                  <div class="social-icons">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day">
+                  <p><strong>Témoignage :</strong> trekkeur + badge</p>
+                  <small>Obj: Communauté, preuve sociale</small>
+                  <div class="social-icons">
+                    <i class="fab fa-facebook-f"></i>
+                  </div>
+                </div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day">
+                  <p><strong>Newsletter :</strong> Actus du mois</p>
+                  <small>Obj: Fidélisation</small>
+                  <div class="social-icons">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                </div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day"></div>
+
+                <!-- Semaine 3 -->
+                <div class="calendar-week">Semaine 3</div>
+                <div class="calendar-day">
+                  <p><strong>Trek de la semaine :</strong> XP + badge secret</p>
+                  <small>Obj: Gamification</small>
+                  <div class="social-icons">
+                    <i class="fab fa-instagram"></i
+                    ><i class="fab fa-tiktok"></i>
+                  </div>
+                </div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day">
+                  <p>
+                    <strong>Article :</strong> Pourquoi gamifier l'outdoor ?
+                  </p>
+                  <small>Obj: Positionnement expert</small>
+                  <div class="social-icons">
+                    <i class="fab fa-linkedin-in"></i>
+                  </div>
+                </div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day">
+                  <p><strong>Story :</strong> Repost de stories</p>
+                  <small>Obj: UGC, communauté</small>
+                  <div class="social-icons">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+
+                <!-- Semaine 4 -->
+                <div class="calendar-week">Semaine 4</div>
+                <div class="calendar-day">
+                  <p><strong>Mise à jour :</strong> Classement XP</p>
+                  <small>Obj: Compétition, retour</small>
+                  <div class="social-icons">
+                    <i class="fab fa-facebook-f"></i>
+                  </div>
+                </div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day">
+                  <p><strong>Behind the scenes :</strong> Repérage</p>
+                  <small>Obj: Humaniser la marque</small>
+                  <div class="social-icons"><i class="fab fa-tiktok"></i></div>
+                </div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day"></div>
+              </div>
+            </div>
+
+            <!-- Calendrier Octobre -->
+            <div id="october" class="calendar-content">
+              <div class="calendar-grid">
+                <!-- En-têtes -->
+                <div class="calendar-header"></div>
+                <div class="calendar-header">Lundi</div>
+                <div class="calendar-header">Mardi</div>
+                <div class="calendar-header">Mercredi</div>
+                <div class="calendar-header">Jeudi</div>
+                <div class="calendar-header">Vendredi</div>
+                <div class="calendar-header">Samedi</div>
+                <div class="calendar-header">Dimanche</div>
+
+                <!-- Semaine 1 -->
+                <div class="calendar-week">Semaine 1</div>
+                <div class="calendar-day">
+                  <p><strong>Carousel :</strong> Concept TREKKS</p>
+                  <small>Obj: Branding, découverte</small>
+                  <div class="social-icons">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day">
+                  <p><strong>Vidéo :</strong> 3 types de trekkeurs</p>
+                  <small>Obj: Viralité, humour</small>
+                  <div class="social-icons"><i class="fab fa-tiktok"></i></div>
+                </div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day">
+                  <p><strong>Post :</strong> Engagement écologique</p>
+                  <small>Obj: Crédibilité, valeurs</small>
+                  <div class="social-icons">
+                    <i class="fab fa-linkedin-in"></i>
+                  </div>
+                </div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day">
+                  <p><strong>Story :</strong> Quiz</p>
+                  <small>Obj: Engagement, fun</small>
+                  <div class="social-icons">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+
+                <!-- Semaine 2 -->
+                <div class="calendar-week">Semaine 2</div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day">
+                  <p><strong>Photo immersive :</strong> Trek + citation</p>
+                  <small>Obj: Emotion, inspiration</small>
+                  <div class="social-icons">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day">
+                  <p><strong>Témoignage vidéo :</strong> Un trekkeur</p>
+                  <small>Obj: Preuve sociale</small>
+                  <div class="social-icons">
+                    <i class="fab fa-facebook-f"></i>
+                  </div>
+                </div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day">
+                  <p><strong>Newsletter :</strong> Focus sur un trek</p>
+                  <small>Obj: Fidélisation, exclusivité</small>
+                  <div class="social-icons">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                </div>
+                <div class="calendar-day"></div>
+
+                <!-- Semaine 3 -->
+                <div class="calendar-week">Semaine 3</div>
+                <div class="calendar-day">
+                  <p><strong>Mini tutoriel :</strong> Préparer son sac</p>
+                  <small>Obj: Éducation, utilité</small>
+                  <div class="social-icons"><i class="fab fa-tiktok"></i></div>
+                </div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day">
+                  <p><strong>Défi communauté :</strong> #PlayYourTrek</p>
+                  <small>Obj: UGC, engagement</small>
+                  <div class="social-icons">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day">
+                  <p><strong>Partenariat :</strong> Interview guide local</p>
+                  <small>Obj: Humanité, réseau</small>
+                  <div class="social-icons">
+                    <i class="fab fa-linkedin-in"></i>
+                  </div>
+                </div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day"></div>
+
+                <!-- Semaine 4 -->
+                <div class="calendar-week">Semaine 4</div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day">
+                  <p><strong>Vote :</strong> Prochain défi</p>
+                  <small>Obj: Co-création, interaction</small>
+                  <div class="social-icons">
+                    <i class="fab fa-facebook-f"></i>
+                  </div>
+                </div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day">
+                  <p><strong>Vidéo :</strong> Making-of repérage</p>
+                  <small>Obj: Authenticité, immersion</small>
+                  <div class="social-icons"><i class="fab fa-tiktok"></i></div>
+                </div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day">
+                  <p><strong>Infographie :</strong> Stats communauté</p>
+                  <small>Obj: Fierté, engagement</small>
+                  <div class="social-icons">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="calendar-day"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8.6: Mockups -->
+      <section class="slide slide-mockups" id="slide-8-6">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title"><i class="fas fa-images"></i> MOCKUPS</h1>
+            <div class="title-line"></div>
+          </div>
+          <div class="mockups-grid">
+            <div class="mockup-item">
+              <img src="assets/mockups/affiche.png" alt="Affiche TREKKS" />
+              <div class="mockup-caption">Affiche Événementielle</div>
+            </div>
+            <div class="mockup-item">
+              <img
+                src="assets/mockups/carte-de-visite.png"
+                alt="Carte de visite TREKKS"
+              />
+              <div class="mockup-caption">Carte de Visite</div>
+            </div>
+            <div class="mockup-item">
+              <img src="assets/mockups/jacket.png" alt="Veste TREKKS" />
+              <div class="mockup-caption">Veste</div>
+            </div>
+            <div class="mockup-item">
+              <img src="assets/mockups/backpack.png" alt="Sac à dos TREKKS" />
+              <div class="mockup-caption">Sac à dos</div>
+            </div>
+            <div class="mockup-item">
+              <img src="assets/mockups/gourde.png" alt="Gourde TREKKS" />
+              <div class="mockup-caption">Gourde</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Popup Mockups Fullscreen -->
+      <div class="mockup-popup" id="mockupPopup">
+        <div class="mockup-popup-content">
+          <button class="mockup-popup-close" id="mockupPopupClose">
+            <i class="fas fa-times"></i>
+          </button>
+          <div class="mockup-popup-inner">
+            <img
+              class="mockup-popup-image"
+              id="mockupPopupImage"
+              src=""
+              alt="Mockup en grand"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 8.7: Storyboard -->
+      <section class="slide slide-storyboard" id="slide-8-7">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title">
+              <i class="fas fa-images"></i> STORYBOARD
+            </h1>
+            <div class="title-line"></div>
+          </div>
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              max-width: 80vw;
+            "
+          >
+            <img
+              src="assets/storyboard.svg"
+              alt="Storyboard du projet TREKKS"
+              style="
+                max-width: 100%;
+                height: auto;
+                border-radius: 10px;
+                box-shadow: var(--shadow);
+              "
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8.8: Vidéo -->
+      <section class="slide slide-video" id="slide-8-8">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title">
+              <i class="fas fa-play-circle"></i> VIDÉO
+            </h1>
+            <div class="title-line"></div>
+          </div>
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              max-width: 80vw;
+            "
+          >
+            <video
+              controls
+              preload="auto"
+              style="
+                max-width: 100%;
+                height: auto;
+                border-radius: 10px;
+                box-shadow: var(--shadow);
+              "
+            >
+              <source src="assets/video-trekks.mp4" type="video/mp4" />
+              Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 9: Conclusion du projet TREKKS -->
+      <section class="slide slide-conclusion" id="slide-9">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h1 class="slide-title">
+              <i class="fas fa-graduation-cap"></i> CONCLUSION DU PROJET TREKKS
+            </h1>
+            <div class="title-line"></div>
+          </div>
+          <div class="content-grid">
+            <div class="content-card">
+              <h4><i class="fas fa-heart"></i> Ce que j'ai le plus aimé</h4>
+              <ul>
+                <li>Univers cohérent</li>
+                <li>Gamification</li>
+                <li>Storytelling</li>
+                <li>Création globale</li>
+                <li>Identité immersive</li>
+              </ul>
+            </div>
+            <div class="content-card">
+              <h4>
+                <i class="fas fa-exclamation-triangle"></i> Ce qui a été le plus
+                challengeant
+              </h4>
+              <ul>
+                <li>Intégration custom</li>
+                <li>Animations complexes</li>
+                <li>Responsive avancé</li>
+                <li>Cohérence UX/UI</li>
+              </ul>
+            </div>
+            <div class="content-card">
+              <h4><i class="fas fa-graduation-cap"></i> Ce que je retiens</h4>
+              <ul>
+                <li>Vision 360°</li>
+                <li>Posture Creative Dev UI</li>
+                <li>Design + Code</li>
+                <li>Cohérence de marque</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 9.5: Section vide -->
+      <section class="slide slide-empty" id="slide-9-5">
+        <div class="slide-content">
+          <!-- Section vide -->
+        </div>
+      </section>
+
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+
+    <!-- Popup Wireframes Fullscreen -->
+    <div class="wireframe-popup" id="wireframePopup">
+      <div class="wireframe-popup-content">
+        <button class="wireframe-popup-close" id="wireframePopupClose">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="wireframe-popup-inner">
+          <img
+            class="wireframe-popup-image"
+            id="wireframePopupImage"
+            src=""
+            alt="Wireframe en grand"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup Maquettes Fullscreen -->
+    <div class="maquette-popup" id="maquettePopup">
+      <div class="maquette-popup-content">
+        <button class="maquette-popup-close" id="maquettePopupClose">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="maquette-popup-inner">
+          <img
+            class="maquette-popup-image"
+            id="maquettePopupImage"
+            src=""
+            alt="Maquette en grand"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
